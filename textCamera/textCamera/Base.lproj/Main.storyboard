@@ -8,6 +8,32 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="vn6-9r-7GB">
+            <objects>
+                <viewController id="PVV-ru-Yzj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RQf-NG-8at">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qJk-sJ-e6J">
+                                <rect key="frame" x="16" y="455" width="343" height="323"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qJk-sJ-e6J" firstAttribute="bottom" secondItem="rpA-fz-0aw" secondAttribute="bottom" id="5tA-gF-9wu"/>
+                            <constraint firstItem="qJk-sJ-e6J" firstAttribute="leading" secondItem="RQf-NG-8at" secondAttribute="leadingMargin" id="TaL-8s-nfY"/>
+                            <constraint firstItem="qJk-sJ-e6J" firstAttribute="trailing" secondItem="RQf-NG-8at" secondAttribute="trailingMargin" id="Y9V-nI-aWb"/>
+                            <constraint firstItem="qJk-sJ-e6J" firstAttribute="top" secondItem="rpA-fz-0aw" secondAttribute="top" constant="411" id="cyE-zJ-XV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rpA-fz-0aw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-13-0xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-676" y="136.69950738916256"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="textCamera" customModuleProvider="target" sceneMemberID="viewController">
