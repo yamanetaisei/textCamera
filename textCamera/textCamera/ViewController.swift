@@ -24,5 +24,14 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         self.present(ipc,animated: true, completion: nil)
     }
     
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if info[.originalImage] != nil{
+            picker.dismiss(animated: true)
+            let storyboard: UIStoryboard = self.storyboard!
+            let second = storyboard.instantiateViewController(withIdentifier: "edit")
+            self.present(second, animated: true, completion: nil)
+        }
+    }
 }
 

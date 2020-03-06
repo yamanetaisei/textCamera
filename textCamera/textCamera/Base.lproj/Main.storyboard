@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="vn6-9r-7GB">
             <objects>
-                <viewController id="PVV-ru-Yzj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="edit" modalPresentationStyle="fullScreen" id="PVV-ru-Yzj" customClass="EditViewController" customModule="textCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RQf-NG-8at">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rpA-fz-0aw"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aZa-wJ-hnz"/>
+                    <connections>
+                        <outlet property="getPicture" destination="qJk-sJ-e6J" id="0HD-3R-un7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-13-0xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,10 +74,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="PVV-ru-Yzj" kind="presentation" identifier="libraryToEdit" id="BM2-UU-Max"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="137.4384236453202"/>
+            <point key="canvasLocation" x="-676" y="-611"/>
         </scene>
     </scenes>
 </document>
