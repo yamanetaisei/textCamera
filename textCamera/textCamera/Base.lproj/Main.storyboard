@@ -14,13 +14,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGH-0F-Cqv">
+                                <rect key="frame" x="16" y="564" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="1gy-yQ-hl3"/>
+                                </constraints>
+                                <state key="normal" title="写真を選ぶ"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsP-1J-NgB">
+                                <rect key="frame" x="239" y="564" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="krb-KX-ZCP"/>
+                                </constraints>
+                                <state key="normal" title="写真を撮る"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="520" id="AGf-wF-cXo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TGH-0F-Cqv" secondAttribute="bottom" constant="94" id="LOX-72-FZH"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="baseline" secondItem="dsP-1J-NgB" secondAttribute="firstBaseline" id="Pfc-d9-hPE"/>
+                            <constraint firstItem="dsP-1J-NgB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VXv-oF-zFT"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="top" secondItem="dsP-1J-NgB" secondAttribute="top" id="Xy7-Ea-V3n"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qYi-HA-rtT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="138.40000000000001" y="137.4384236453202"/>
         </scene>
     </scenes>
 </document>
