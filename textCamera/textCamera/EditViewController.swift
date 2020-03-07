@@ -14,8 +14,11 @@ class EditViewController: UIViewController{
     
     @IBOutlet weak var getPicture: UIImageView!
     
+    var image: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getPicture.image = image
     }
 }
