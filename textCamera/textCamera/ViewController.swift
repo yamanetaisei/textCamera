@@ -31,8 +31,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             picker.dismiss(animated: true)
             //遷移
             let storyboard: UIStoryboard = self.storyboard!
-            let second = storyboard.instantiateViewController(withIdentifier: "edit")
-            self.present(second, animated: true, completion: nil)
+            let next = storyboard.instantiateViewController(withIdentifier: "edit")
+            self.present(next, animated: true, completion: nil)
         }
     }
 }
