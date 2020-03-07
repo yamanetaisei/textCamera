@@ -27,7 +27,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if info[.originalImage] != nil{
+            //写真フォルダを閉じる
             picker.dismiss(animated: true)
+            //遷移
             let storyboard: UIStoryboard = self.storyboard!
             let second = storyboard.instantiateViewController(withIdentifier: "edit")
             self.present(second, animated: true, completion: nil)
