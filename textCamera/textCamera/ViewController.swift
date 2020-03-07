@@ -27,16 +27,16 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if info[.originalImage] != nil{
-            
+            //選んだ画像を変数に代入
             let image = info[.editedImage] as! UIImage
             //写真フォルダを閉じる
             picker.dismiss(animated: true)
             //遷移
             let storyboard: UIStoryboard = self.storyboard!
             let next = storyboard.instantiateViewController(withIdentifier: "edit") as! EditViewController
+            //next(遷移先)のいimage変数へ選んだ写真を代入
             next.image = image
             self.present(next, animated: true, completion: nil)
         }
     }
 }
-

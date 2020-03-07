@@ -13,7 +13,7 @@ class EditViewController: UIViewController{
     
     
     @IBOutlet weak var getPicture: UIImageView!
-    
+    // 画像を受け取る変数
     var image: UIImage?
     
     override func viewDidLoad() {
