@@ -13,6 +13,7 @@ class EditViewController: UIViewController{
     
     
     @IBOutlet weak var getPicture: UIImageView!
+    @IBOutlet weak var textField: UITextField!
     // 画像を受け取る変数
     var image: UIImage?
     

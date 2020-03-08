@@ -39,6 +39,7 @@
                     <navigationItem key="navigationItem" id="aZa-wJ-hnz"/>
                     <connections>
                         <outlet property="getPicture" destination="qJk-sJ-e6J" id="0HD-3R-un7"/>
+                        <outlet property="textField" destination="nNX-TU-ZyI" id="gqM-YC-3ee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-13-0xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
