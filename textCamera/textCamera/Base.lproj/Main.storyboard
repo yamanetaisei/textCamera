@@ -18,13 +18,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qJk-sJ-e6J">
                                 <rect key="frame" x="16" y="455" width="343" height="323"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNX-TU-ZyI">
+                                <rect key="frame" x="16" y="117" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="nNX-TU-ZyI" firstAttribute="trailing" secondItem="qJk-sJ-e6J" secondAttribute="trailing" id="4ff-Ad-naC"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="bottom" secondItem="rpA-fz-0aw" secondAttribute="bottom" id="5tA-gF-9wu"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="leading" secondItem="RQf-NG-8at" secondAttribute="leadingMargin" id="TaL-8s-nfY"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="trailing" secondItem="RQf-NG-8at" secondAttribute="trailingMargin" id="Y9V-nI-aWb"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="top" secondItem="rpA-fz-0aw" secondAttribute="top" constant="411" id="cyE-zJ-XV0"/>
+                            <constraint firstItem="nNX-TU-ZyI" firstAttribute="top" secondItem="rpA-fz-0aw" secondAttribute="top" constant="73" id="ic4-Rc-COC"/>
+                            <constraint firstItem="nNX-TU-ZyI" firstAttribute="leading" secondItem="qJk-sJ-e6J" secondAttribute="leading" id="otQ-5u-ac1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rpA-fz-0aw"/>
                     </view>
@@ -35,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-13-0xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="-466"/>
+            <point key="canvasLocation" x="280.80000000000001" y="-466.25615763546801"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
