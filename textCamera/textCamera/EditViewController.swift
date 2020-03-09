@@ -22,11 +22,12 @@ class EditViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getPicture.image = image
+        // delegateを設定
         textField.delegate = self
     }
-    
+    // キーボードのreturnが押された際に呼ばれる
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-
+        // キーを閉じる
         textField.resignFirstResponder()
         
         return true
