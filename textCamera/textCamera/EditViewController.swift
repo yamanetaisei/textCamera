@@ -16,7 +16,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var textField: UITextField!
     // 画像を受け取る変数
     var image: UIImage?
-    var text = ""
+    var text: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,12 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     // キーボードのreturnが押された際に呼ばれる
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        // textへ入力した文字列を代入する
+        text = textField.text
+        //textFieldを空にする
+        textField.text = ""
         // キーを閉じる
         textField.resignFirstResponder()
-        
         return true
     }
 }
