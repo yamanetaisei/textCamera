@@ -70,6 +70,9 @@
                                     <constraint firstAttribute="width" constant="120" id="krb-KX-ZCP"/>
                                 </constraints>
                                 <state key="normal" title="写真を撮る"/>
+                                <connections>
+                                    <action selector="goCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJ7-NB-KE8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

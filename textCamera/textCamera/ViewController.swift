@@ -39,4 +39,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             self.present(next, animated: true, completion: nil)
         }
     }
+        
+    @IBAction func goCamera(_ sender: Any) {
+        let camera = UIImagePickerController.SourceType.camera
+        
+        if UIImagePickerController.isSourceTypeAvailable(camera){
+            let picker = UIImagePickerController()
+            picker.sourceType = camera
+            picker.delegate = self
+            self.present(picker, animated: true)
+        }
+    }
 }
