@@ -9,6 +9,19 @@
 import Foundation
 import UIKit
 
+extension UIImage{
+    //写真とテロップを合成する
+    func composite(image :UIImage) -> UIImage?{
+        UIGraphicsBeginImageContextWithOptions(self.size, false, 0)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        let rect = CGRect(x: 0,y: 0,width: image.size.width,height: image.size.height)
+        image.draw(in: rect)
+         let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
 class EditViewController: UIViewController, UITextFieldDelegate{
     
     
@@ -21,7 +34,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getPicture.image = image
+        getPicture.image = image?.composite(image:UIImage(imageLiteralResourceName: "Window"))
         // delegateを設定
         textField.delegate = self
     }
