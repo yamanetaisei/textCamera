@@ -19,8 +19,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         let ipc = UIImagePickerController()
         ipc.delegate = self
         ipc.sourceType = UIImagePickerController.SourceType.photoLibrary
-        //編集を可能にする
-        ipc.allowsEditing = true
         self.present(ipc,animated: true, completion: nil)
     }
     
@@ -28,7 +26,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if info[.originalImage] != nil{
             //選んだ画像を変数に代入
-            let image = info[.editedImage] as! UIImage
+            let image = info[.originalImage] as! UIImage
             //写真フォルダを閉じる
             picker.dismiss(animated: true)
             //遷移
