@@ -34,7 +34,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getPicture.image = image?.composite(image:UIImage(imageLiteralResourceName: "Window"))
+        getPicture.image = image
         // delegateを設定
         textField.delegate = self
     }
