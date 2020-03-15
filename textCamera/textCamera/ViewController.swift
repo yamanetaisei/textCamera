@@ -32,8 +32,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             //遷移
             let storyboard: UIStoryboard = self.storyboard!
             let next = storyboard.instantiateViewController(withIdentifier: "edit") as! EditViewController
-            //next(遷移先)のいimage変数へ選んだ写真を代入
-            next.image = image
+            //next(遷移先)のreceivedImage変数へ選んだ写真を代入
+            next.receivedImage = image
             self.present(next, animated: true, completion: nil)
         }
     }
