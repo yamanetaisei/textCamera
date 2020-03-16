@@ -29,6 +29,9 @@
                                     <constraint firstAttribute="height" constant="50" id="mJd-D1-bqQ"/>
                                 </constraints>
                                 <state key="normal" title="作成"/>
+                                <connections>
+                                    <action selector="createButton:" destination="PVV-ru-Yzj" eventType="touchUpInside" id="EZi-It-dAl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
