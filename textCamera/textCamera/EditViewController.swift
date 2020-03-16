@@ -43,8 +43,6 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         // textへ入力した文字列を代入する
         useText = textField.text
-        //textFieldを空にする
-//        textField.text = ""
         // キーを閉じる
         textField.resignFirstResponder()
         return true
