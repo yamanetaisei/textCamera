@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class CheckViewController: UIViewController, UITextFieldDelegate{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
