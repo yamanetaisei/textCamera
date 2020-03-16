@@ -23,14 +23,24 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qJk-sJ-e6J">
                                 <rect key="frame" x="16" y="455" width="343" height="323"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czn-aJ-TfT">
+                                <rect key="frame" x="128" y="208" width="118" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mJd-D1-bqQ"/>
+                                </constraints>
+                                <state key="normal" title="作成"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Czn-aJ-TfT" firstAttribute="top" secondItem="nNX-TU-ZyI" secondAttribute="bottom" constant="57" id="4Bb-b0-hra"/>
                             <constraint firstItem="nNX-TU-ZyI" firstAttribute="trailing" secondItem="qJk-sJ-e6J" secondAttribute="trailing" id="4ff-Ad-naC"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="bottom" secondItem="rpA-fz-0aw" secondAttribute="bottom" id="5tA-gF-9wu"/>
+                            <constraint firstItem="Czn-aJ-TfT" firstAttribute="leading" secondItem="rpA-fz-0aw" secondAttribute="leading" constant="128" id="IRR-Ha-72v"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="leading" secondItem="RQf-NG-8at" secondAttribute="leadingMargin" id="TaL-8s-nfY"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="trailing" secondItem="RQf-NG-8at" secondAttribute="trailingMargin" id="Y9V-nI-aWb"/>
                             <constraint firstItem="qJk-sJ-e6J" firstAttribute="top" secondItem="rpA-fz-0aw" secondAttribute="top" constant="411" id="cyE-zJ-XV0"/>
+                            <constraint firstItem="Czn-aJ-TfT" firstAttribute="centerX" secondItem="nNX-TU-ZyI" secondAttribute="centerX" id="fqL-R0-dzQ"/>
                             <constraint firstItem="nNX-TU-ZyI" firstAttribute="top" secondItem="rpA-fz-0aw" secondAttribute="top" constant="73" id="ic4-Rc-COC"/>
                             <constraint firstItem="nNX-TU-ZyI" firstAttribute="leading" secondItem="qJk-sJ-e6J" secondAttribute="leading" id="otQ-5u-ac1"/>
                         </constraints>
@@ -44,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-13-0xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="-611"/>
+            <point key="canvasLocation" x="300" y="-611.08374384236458"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
