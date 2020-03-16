@@ -62,7 +62,7 @@
         <!--View Controller-->
         <scene sceneID="wUq-lv-ekk">
             <objects>
-                <viewController id="xo6-Lv-JSb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="check" modalPresentationStyle="fullScreen" id="xo6-Lv-JSb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2z-4G-d54">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

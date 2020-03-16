@@ -51,7 +51,9 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func createButton(_ sender: Any) {
-        
+        let storyboard: UIStoryboard = self.storyboard!
+        let next = storyboard.instantiateViewController(withIdentifier: "check")
+        self.present(next, animated: true, completion: nil)
     }
     
     func createImage(image :UIImage) ->UIImage{
@@ -64,7 +66,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
             NSAttributedString.Key.paragraphStyle: textStyle
         ]
         useText.draw(in: textRect, withAttributes: textFontAttributes)
-        receivedImage = image
-        return receivedImage!
+        let newImage = image
+        return newImage
     }
 }
