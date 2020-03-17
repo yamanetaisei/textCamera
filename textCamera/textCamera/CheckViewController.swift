@@ -17,5 +17,6 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        perfectImage.image = receivedPerfectImage
     }
 }

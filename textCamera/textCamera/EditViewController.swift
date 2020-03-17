@@ -15,10 +15,11 @@ extension UIImage{
         let size = CGSize(width: self.size.width, height: self.size.height + self.size.height/10)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(UIColor.red.cgColor)
+        context!.setFillColor(UIColor.gray.cgColor)
         context!.fill(CGRect(origin: CGPoint.zero, size: size))
         self.draw(in: CGRect(x: 0, y: self.size.height/10, width: self.size.width, height:self.size.height ))
         guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
         return image
     }
 }
@@ -51,24 +52,36 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func createButton(_ sender: Any) {
-        let sendImage = createImage(image: baseImage!)
-        let storyboard: UIStoryboard = self.storyboard!
-        let next = storyboard.instantiateViewController(withIdentifier: "check") as! CheckViewController
-        next.receivedPerfectImage = sendImage
-        self.present(next, animated: true, completion: nil)
+        if useText != nil{
+                let sendImage = createImage(image: baseImage!)
+                let storyboard: UIStoryboard = self.storyboard!
+                let next = storyboard.instantiateViewController(withIdentifier: "check") as! CheckViewController
+                next.receivedPerfectImage = sendImage
+                self.present(next, animated: true, completion: nil)
+        }
     }
     
     func createImage(image :UIImage) ->UIImage{
-        let font = UIFont.boldSystemFont(ofSize: 32)
-        let textRect = CGRect(x: 5, y: 5, width: image.size.width - 5, height: image.size.height - 5)
+        
+        let size = CGSize(width: (baseImage?.size.width)!, height: (baseImage?.size.height)!)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        context!.fill(CGRect(origin: CGPoint.zero, size: size))
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        
+        let font = UIFont.boldSystemFont(ofSize: 50)
+        let textRect = CGRect(x: 5, y: 5, width: image.size.width, height: image.size.height / 10)
         let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         let textFontAttributes = [
             NSAttributedString.Key.font: font,
-            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.foregroundColor: UIColor.black,
             NSAttributedString.Key.paragraphStyle: textStyle
         ]
         useText.draw(in: textRect, withAttributes: textFontAttributes)
-        let newImage = image
-        return newImage
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
 }
