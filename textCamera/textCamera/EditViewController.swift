@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIImage{
-    //写真とテロップを合成する
+    //写真にテロップをつける
     func composite(image :UIImage) -> UIImage?{
         let size = CGSize(width: self.size.width, height: self.size.height + self.size.height/10)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
