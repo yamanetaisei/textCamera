@@ -52,24 +52,27 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func createButton(_ sender: Any) {
-        if useText != nil{
+        //テキストフィールドに文字が入ってる？
+        if useText != nil{//YES
                 let sendImage = createImage(image: baseImage!)
                 let storyboard: UIStoryboard = self.storyboard!
                 let next = storyboard.instantiateViewController(withIdentifier: "check") as! CheckViewController
                 next.receivedPerfectImage = sendImage
                 self.present(next, animated: true, completion: nil)
-        }
+        }//NO
     }
-    
+    // imageにテキストを合成してくれるメソッド
     func createImage(image :UIImage) ->UIImage{
-        
+        //文字のサイズ
         let size = CGSize(width: (baseImage?.size.width)!, height: (baseImage?.size.height)!)
+        //contextのサイズを指定
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        //contextを生成 & 変数代入
         let context = UIGraphicsGetCurrentContext()
         context!.fill(CGRect(origin: CGPoint.zero, size: size))
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
-        
-        let font = UIFont.boldSystemFont(ofSize:  image.size.height/12)
+        //文字サイズ
+        let font = UIFont.boldSystemFont(ofSize:  image.size.height/20)
         let textRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height/11)
         let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         let textFontAttributes = [
