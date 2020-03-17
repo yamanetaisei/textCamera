@@ -69,8 +69,8 @@ class EditViewController: UIViewController, UITextFieldDelegate{
         context!.fill(CGRect(origin: CGPoint.zero, size: size))
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
         
-        let font = UIFont.boldSystemFont(ofSize: 50)
-        let textRect = CGRect(x: 5, y: 5, width: image.size.width, height: image.size.height / 10)
+        let font = UIFont.boldSystemFont(ofSize:  image.size.height/12)
+        let textRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height/11)
         let textStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         let textFontAttributes = [
             NSAttributedString.Key.font: font,
