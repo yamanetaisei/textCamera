@@ -31,11 +31,13 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     // 画像を受け取る変数
     var receivedImage: UIImage?
     var useText: String!
+    var baseImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getPicture.image = receivedImage?.composite(image: receivedImage!)
+        baseImage = receivedImage?.composite(image: receivedImage!)
+        getPicture.image = baseImage
         // delegateを設定
         textField.delegate = self
     }
@@ -49,8 +51,10 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func createButton(_ sender: Any) {
+        let sendImage = createImage(image: baseImage!)
         let storyboard: UIStoryboard = self.storyboard!
-        let next = storyboard.instantiateViewController(withIdentifier: "check")
+        let next = storyboard.instantiateViewController(withIdentifier: "check") as! CheckViewController
+        next.receivedPerfectImage = sendImage
         self.present(next, animated: true, completion: nil)
     }
     

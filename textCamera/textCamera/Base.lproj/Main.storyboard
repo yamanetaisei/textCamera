@@ -66,13 +66,27 @@
                     <view key="view" contentMode="scaleToFill" id="e2z-4G-d54">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VBB-6m-KCA">
+                                <rect key="frame" x="16" y="105" width="343" height="278"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nPY-l7-7Ka" firstAttribute="bottom" secondItem="VBB-6m-KCA" secondAttribute="bottom" constant="395" id="4cO-m1-5cD"/>
+                            <constraint firstItem="VBB-6m-KCA" firstAttribute="top" secondItem="nPY-l7-7Ka" secondAttribute="top" constant="61" id="WCk-XJ-6ly"/>
+                            <constraint firstItem="VBB-6m-KCA" firstAttribute="trailing" secondItem="e2z-4G-d54" secondAttribute="trailingMargin" id="qc2-9o-d2c"/>
+                            <constraint firstItem="VBB-6m-KCA" firstAttribute="leading" secondItem="e2z-4G-d54" secondAttribute="leadingMargin" id="vdR-nb-SIg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nPY-l7-7Ka"/>
                     </view>
+                    <connections>
+                        <outlet property="perfectImage" destination="VBB-6m-KCA" id="aDC-XE-Zew"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZZ-Dx-cH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306" y="-604"/>
+            <point key="canvasLocation" x="1304.8" y="-604.43349753694588"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

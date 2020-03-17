@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class CheckViewController: UIViewController, UITextFieldDelegate{
+    
+    @IBOutlet weak var perfectImage: UIImageView!
+    
+    var receivedPerfectImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
