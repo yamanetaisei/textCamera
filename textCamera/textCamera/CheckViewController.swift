@@ -22,4 +22,9 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
     @IBAction func cancelButton(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    @IBAction func addButton(_ sender: Any) {
+       let addImage = perfectImage.image
+        UIImageWriteToSavedPhotosAlbum(addImage!, nil, nil, nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }

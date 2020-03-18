@@ -87,6 +87,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L38-if-gjo">
                                         <rect key="frame" x="228.66666666666666" y="0.0" width="114.33333333333334" height="171"/>
                                         <state key="normal" title="保存"/>
+                                        <connections>
+                                            <action selector="addButton:" destination="xo6-Lv-JSb" eventType="touchUpInside" id="Z9x-Fp-9dP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
