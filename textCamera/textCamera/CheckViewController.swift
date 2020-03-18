@@ -19,4 +19,7 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         perfectImage.image = receivedPerfectImage
     }
+    @IBAction func cancelButton(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }

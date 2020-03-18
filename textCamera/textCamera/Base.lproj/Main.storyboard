@@ -76,6 +76,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-8j-gHU">
                                         <rect key="frame" x="0.0" y="0.0" width="114.33333333333333" height="171"/>
                                         <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="xo6-Lv-JSb" eventType="touchUpInside" id="rLf-bj-BAT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GX-3W-j8F">
                                         <rect key="frame" x="114.33333333333334" y="0.0" width="114.33333333333334" height="171"/>
