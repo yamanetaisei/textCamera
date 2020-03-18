@@ -44,8 +44,6 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     // キーボードのreturnが押された際に呼ばれる
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-        // textへ入力した文字列を代入する
-        useText = textField.text
         // キーを閉じる
         textField.resignFirstResponder()
         return true
