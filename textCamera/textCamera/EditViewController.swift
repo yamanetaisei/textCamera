@@ -52,6 +52,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func createButton(_ sender: Any) {
+        useText = textField.text
         //テキストフィールドに文字が入ってる？
         if useText != nil{//YES
                 let sendImage = createImage(image: baseImage!)
