@@ -27,4 +27,8 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
         UIImageWriteToSavedPhotosAlbum(addImage!, nil, nil, nil)
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    @IBAction func shareButton(_ sender: Any) {
+        let controller = UIActivityViewController(activityItems: [perfectImage.image as Any], applicationActivities: nil)
+        self.present(controller, animated: true, completion: nil)
+    }
 }
