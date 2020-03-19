@@ -19,15 +19,21 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         perfectImage.image = receivedPerfectImage
     }
+    //戻るボタン
     @IBAction func cancelButton(_ sender: Any) {
+        //2つ前に戻っている
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    // 追加ボタン
     @IBAction func addButton(_ sender: Any) {
        let addImage = perfectImage.image
+        //アルバムへ追加している
         UIImageWriteToSavedPhotosAlbum(addImage!, nil, nil, nil)
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    //共有ボタン
     @IBAction func shareButton(_ sender: Any) {
+        //UIActivityを呼んでいる
         let controller = UIActivityViewController(activityItems: [perfectImage.image as Any], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil)
     }
