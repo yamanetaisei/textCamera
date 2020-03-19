@@ -37,6 +37,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        textField.placeholder = "表示したい文字を入力してください"
         baseImage = receivedImage?.composite(image: receivedImage!)
         getPicture.image = baseImage
         // delegateを設定
