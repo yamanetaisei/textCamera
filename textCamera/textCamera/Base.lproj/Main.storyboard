@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,22 +126,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGH-0F-Cqv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGH-0F-Cqv">
                                 <rect key="frame" x="16" y="564" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="1gy-yQ-hl3"/>
+                                    <constraint firstAttribute="width" constant="120" id="MWt-ND-RIv"/>
                                 </constraints>
-                                <state key="normal" title="写真を選ぶ"/>
+                                <state key="normal" image="folder1.0"/>
                                 <connections>
                                     <action selector="goLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJ0-tg-QmJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsP-1J-NgB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsP-1J-NgB">
                                 <rect key="frame" x="239" y="564" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="krb-KX-ZCP"/>
+                                    <constraint firstAttribute="width" constant="120" id="pM8-Uq-dxd"/>
                                 </constraints>
-                                <state key="normal" title="写真を撮る"/>
+                                <state key="normal" image="camera1.0"/>
                                 <connections>
                                     <action selector="goCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJ7-NB-KE8"/>
                                 </connections>
@@ -149,19 +149,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="520" id="AGf-wF-cXo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TGH-0F-Cqv" secondAttribute="bottom" constant="94" id="LOX-72-FZH"/>
-                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="baseline" secondItem="dsP-1J-NgB" secondAttribute="firstBaseline" id="Pfc-d9-hPE"/>
-                            <constraint firstItem="dsP-1J-NgB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VXv-oF-zFT"/>
-                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="top" secondItem="dsP-1J-NgB" secondAttribute="top" id="Xy7-Ea-V3n"/>
-                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qYi-HA-rtT"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9K0-us-sK6"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="top" secondItem="dsP-1J-NgB" secondAttribute="top" id="BQN-5f-hgO"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="bottom" secondItem="dsP-1J-NgB" secondAttribute="bottom" id="fJu-yX-rYD"/>
+                            <constraint firstItem="dsP-1J-NgB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="inp-wv-cCO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TGH-0F-Cqv" secondAttribute="bottom" constant="94" id="q2S-Ee-jpA"/>
+                            <constraint firstItem="TGH-0F-Cqv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="520" id="sFM-yn-rCr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-676" y="-611"/>
+            <point key="canvasLocation" x="-676" y="-611.08374384236458"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera1.0" width="64" height="64"/>
+        <image name="folder1.0" width="64" height="64"/>
+    </resources>
 </document>
