@@ -59,7 +59,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
         let size = CGSize(width: image.size.width, height: image.size.height + image.size.height/10)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(UIColor.gray.cgColor)
+        context!.setFillColor(UIColor.white.cgColor)
         context!.fill(CGRect(origin: CGPoint.zero, size: size))
         image.draw(in: CGRect(x: 0, y: image.size.height/10, width: image.size.width, height:image.size.height ))
         let image = UIGraphicsGetImageFromCurrentImageContext()
