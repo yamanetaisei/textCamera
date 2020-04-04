@@ -36,6 +36,13 @@ class EditViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let topColor = UIColor(hex: "#64b3f4")
+               let bottomColor = UIColor(hex: "#c2e59c")
+               let gradientColors: [CGColor] = [topColor!.cgColor, bottomColor!.cgColor]
+               let gradientLayer: CAGradientLayer = CAGradientLayer()
+               gradientLayer.colors = gradientColors
+               gradientLayer.frame = self.view.bounds
+               self.view.layer.insertSublayer(gradientLayer, at: 0)
         // Do any additional setup after loading the view.
         textField.placeholder = "表示したい文字を入力してください"
         baseImage = composite(image: receivedImage!)
