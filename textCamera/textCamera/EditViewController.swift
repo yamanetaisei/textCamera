@@ -9,20 +9,20 @@
 import Foundation
 import UIKit
 
-extension UIImage{
-    //写真にテロップをつける
-    func composite(image :UIImage) -> UIImage?{
-        let size = CGSize(width: self.size.width, height: self.size.height + self.size.height/10)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(UIColor.gray.cgColor)
-        context!.fill(CGRect(origin: CGPoint.zero, size: size))
-        self.draw(in: CGRect(x: 0, y: self.size.height/10, width: self.size.width, height:self.size.height ))
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
-        UIGraphicsEndImageContext()
-        return image
-    }
-}
+//extension UIImage{
+//    //写真にテロップをつける
+//    func composite(image :UIImage) -> UIImage?{
+//        let size = CGSize(width: self.size.width, height: self.size.height + self.size.height/10)
+//        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+//        let context = UIGraphicsGetCurrentContext()
+//        context!.setFillColor(UIColor.gray.cgColor)
+//        context!.fill(CGRect(origin: CGPoint.zero, size: size))
+//        self.draw(in: CGRect(x: 0, y: self.size.height/10, width: self.size.width, height:self.size.height ))
+//        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
+//}
 
 class EditViewController: UIViewController, UITextFieldDelegate{
     
@@ -38,7 +38,7 @@ class EditViewController: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         textField.placeholder = "表示したい文字を入力してください"
-        baseImage = receivedImage?.composite(image: receivedImage!)
+        baseImage = composite(image: receivedImage!)
         getPicture.image = baseImage
         // delegateを設定
         textField.delegate = self
@@ -60,6 +60,18 @@ class EditViewController: UIViewController, UITextFieldDelegate{
                 next.receivedPerfectImage = sendImage
                 self.present(next, animated: true, completion: nil)
         }//NO
+    }
+    //imageにcontextを合成してくれるメソッド
+    func composite(image: UIImage)-> UIImage{
+        let size = CGSize(width: image.size.width, height: image.size.height + image.size.height/10)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(UIColor.gray.cgColor)
+        context!.fill(CGRect(origin: CGPoint.zero, size: size))
+        image.draw(in: CGRect(x: 0, y: image.size.height/10, width: image.size.width, height:image.size.height ))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
     // imageにテキストを合成してくれるメソッド
     func createImage(image :UIImage) ->UIImage{
