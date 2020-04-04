@@ -9,20 +9,6 @@
 import Foundation
 import UIKit
 
-//extension UIImage{
-//    //写真にテロップをつける
-//    func composite(image :UIImage) -> UIImage?{
-//        let size = CGSize(width: self.size.width, height: self.size.height + self.size.height/10)
-//        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-//        let context = UIGraphicsGetCurrentContext()
-//        context!.setFillColor(UIColor.gray.cgColor)
-//        context!.fill(CGRect(origin: CGPoint.zero, size: size))
-//        self.draw(in: CGRect(x: 0, y: self.size.height/10, width: self.size.width, height:self.size.height ))
-//        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
-//        UIGraphicsEndImageContext()
-//        return image
-//    }
-//}
 
 class EditViewController: UIViewController, UITextFieldDelegate{
     
