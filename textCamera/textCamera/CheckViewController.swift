@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class CheckViewController: UIViewController, UITextFieldDelegate{
     
@@ -43,5 +44,21 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
         //UIActivityを呼んでいる
         let controller = UIActivityViewController(activityItems: [perfectImage.image as Any], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    func showCheckAnimation(){
+        let animationView = AnimationView(name: "CheckAnimation")
+        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        animationView.center = self.view.center
+        animationView.contentMode = .scaleAspectFit
+        animationView.animationSpeed = 1
+        
+        view.addSubview(animationView)
+        
+        animationView.play { finished in
+            if finished {
+                animationView.removeFromSuperview()
+            }
+        }
     }
 }
