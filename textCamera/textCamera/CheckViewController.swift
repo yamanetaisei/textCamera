@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Lottie
+import PKHUD
 
 class CheckViewController: UIViewController, UITextFieldDelegate{
     
@@ -35,6 +35,7 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
     // 追加ボタン
     @IBAction func addButton(_ sender: Any) {
        let addImage = perfectImage.image
+        HUD.flash(.success,delay: 1.0)
         //アルバムへ追加している
         UIImageWriteToSavedPhotosAlbum(addImage!, nil, nil, nil)
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -46,19 +47,19 @@ class CheckViewController: UIViewController, UITextFieldDelegate{
         self.present(controller, animated: true, completion: nil)
     }
     
-    func showCheckAnimation(){
-        let animationView = AnimationView(name: "CheckAnimation")
-        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
-        animationView.center = self.view.center
-        animationView.contentMode = .scaleAspectFit
-        animationView.animationSpeed = 1
-        
-        view.addSubview(animationView)
-        
-        animationView.play { finished in
-            if finished {
-                animationView.removeFromSuperview()
-            }
-        }
-    }
+//    func showCheckAnimation(){
+//        let animationView = AnimationView(name: "CheckAnimation")
+//        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+//        animationView.center = self.view.center
+//        animationView.contentMode = .scaleAspectFit
+//        animationView.animationSpeed = 1
+//
+//        view.addSubview(animationView)
+//
+//        animationView.play { finished in
+//            if finished {
+//                animationView.removeFromSuperview()
+//            }
+//        }
+//    }
 }
