@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (3.1.6)
+  - PKHUD (5.3.0)
+
+DEPENDENCIES:
+  - lottie-ios
+  - PKHUD (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - PKHUD
+
+SPEC CHECKSUMS:
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+
+PODFILE CHECKSUM: 6ba0eb12c7598a6db785bd8e533e0cf8e103f6ca
+
+COCOAPODS: 1.8.4
