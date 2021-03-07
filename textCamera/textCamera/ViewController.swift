@@ -12,14 +12,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let topColor = UIColor(hex: "#64b3f4")
-        let bottomColor = UIColor(hex: "#c2e59c")
-        let gradientColors: [CGColor] = [topColor!.cgColor, bottomColor!.cgColor]
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColors
-        gradientLayer.frame = self.view.bounds
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
     @IBAction func goLibrary(_ sender: Any) {
